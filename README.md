@@ -14,6 +14,7 @@ This repository contains:
 ## Updates
 
 - The initial technical evaluation of the system has been published in the journal [Brain-Computer Interfaces in 2021](https://doi.org/10.1080/2326263X.2021.1972633)
+- The project is now part of the [KIT Earables Community](https://earables.teco.edu/)
 - We have two article submissions under review for updated versions of the OpenBCI-cEEGrid combination. Please stay tuned for newer versions in Fall/Winter.
 - We will keep making all the materials and documentation available. To make the system more readily available, we also offer to source the materials for you. So if you'd like to save some time, just check out [this website](https://exgtools.expeeeriments.io/).
 
@@ -24,6 +25,7 @@ This repository contains:
 ## Publications with this System
 This is a list of peer-reviewed articles that have used the OpenBCI-cEEGrid combination:
 
+- Knierim, M.T., Schemmer, M., Bauer, Niklas (2022). A Simplified Design of a cEEGrid Ear-Electrode Adapter for the OpenBCI Biosensing Platform. HardwareX. [e00357](https://doi.org/10.1016/j.ohx.2022.e00357)
 - Knierim, M. T., Berger, C., & Reali, P. (2021). Open-source concealed EEG data collection for Brain-computer-interfaces - neural observation through OpenBCI amplifiers with around-the-ear cEEGrid electrodes. Brain-Computer Interfaces, 8(4), 161-179.
 - Knierim, M. T., Schemmer, M., & Perusquía-Hernández, M. (2021). Exploring the recognition of facial activities through around-the-ear electrode arrays (cEEGrids). Proceedings of the NeuroIS Retreat 2021, 47-55.
 - Knierim, M. T., Schemmer, M., & Woehler, D. (2021). Detecting Daytime Bruxism Through Convenient and Wearable Around-the-Ear Electrodes. Proceedings of the International Conference on Applied Human Factors and Ergonomics 2021, 26-33.
