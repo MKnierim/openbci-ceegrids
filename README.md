@@ -68,18 +68,20 @@ References:
 
 ## Materials
 
-| Amount | Part   Description                                                  | Instance /   Reference                                                                                               |
+| Amount | Part   Description                                                  | Instance /   Reference                                                                                               | Est. Cost |
 |--------|---------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
-| 1      | OpenBCI Cyton Board + Daisy Shield   (Biosignal Acquisition Boards) | Available from the manufacturer at: https://shop.openbci.com/collections/frontpage/products/cyton-daisy-biosensing-boards-16-channel?variant=38959256526                                                                                  |
-| 2      | cEEGrid Electrodes                                                  | Available from   the manufacturer at: https://shop.tmsi.com/product/ceegrid (The shop is currently being redesigned, but you can contact TMSI via mail to order cEEGrids - sales@tmsi.com)                                          |
-| 2      | Printed   Circuit Boards                                            | Custom PCB made   available by the cEEGrid developers here: https://github.com/mgbleichner/nEEGlace/tree/master/cEEGrid-Adapter; Can be manufactured on demand, e.g. at https://aisler.net/ (upload all files as .zip)                                                                                                                                                                 |
-| 1      | Re-designed Cyton + Daisy Board Mounts                              | [3D-Print Files](./stl/)                                                       |
-| 2      | PCB Holder                                                          | [3D-Print Files](./stl/)                                                                                             |
-| 1      | Headband Clip                                                       | [3D-Print Files](./stl/)                                                                                             |
-| 2      | No. 4 Screws for Brittle Plastic                                    | To attach the headband clip to the   Cyton board mount - https://www.mcmaster.com/90385A323/                         |
-| 2      | Mini Edge Card Socket                                               | SAMTEC MB1-120-01-L-S-01-SL-N –   configurable at https://www.samtec.com/products/mb1                                |
-| 20     | Pin Headers                                                         | Here we used short male headers   with 0.1 inch pitch, e.g. available at https://www.adafruit.com/product/3009       |
-| 20     | Jumper Cables                                                       | Here we used short (3 inch)   female/female jumper wires, e.g. available at   https://www.adafruit.com/product/1951  |
+| 1      | OpenBCI Cyton Board + Daisy Shield   (Biosignal Acquisition Boards) | Available from the manufacturer at: https://shop.openbci.com/collections/frontpage/products/cyton-daisy-biosensing-boards-16-channel?variant=38959256526                                                                                  | 2.050$ |
+| 2      | cEEGrid Electrodes                                                  | Available from   the manufacturer at: https://shop.tmsi.com/product/ceegrid (The shop is currently being redesigned, but you can contact TMSI via mail to order cEEGrids - sales@tmsi.com)                                          | 65.00$ |
+| 2      | Printed   Circuit Boards                                            | Custom PCB made   available by the cEEGrid developers here: https://github.com/mgbleichner/nEEGlace/tree/master/cEEGrid-Adapter; Can be manufactured on demand, e.g. at https://aisler.net/ (upload all files as .zip)                                                                                                                                                                 | 25.00$ |
+| 1      | Re-designed Cyton + Daisy Board Mounts                              | [3D-Print Files](./stl/)                                                       | All 3D-Printed Parts 20.00$ |
+| 2      | PCB Holder                                                          | [3D-Print Files](./stl/)                                                                                              | 0.00$ |
+| 1      | Headband Clip                                                       | [3D-Print Files](./stl/)                                                                                             | 0.00$ |
+| 2      | No. 4 Screws for Brittle Plastic                                    | To attach the headband clip to the   Cyton board mount - https://www.mcmaster.com/90385A323/                         | 0.50$ |
+| 2      | Mini Edge Card Socket                                               | SAMTEC MB1-120-01-L-S-01-SL-N –   configurable at https://www.samtec.com/products/mb1                                | 12.50$ |
+| 20     | Pin Headers                                                         | Here we used short male headers   with 0.1 inch pitch, e.g. available at https://www.adafruit.com/product/3009       | 5.00$ |
+| 20     | Jumper Cables                                                       | Here we used short (3 inch)   female/female jumper wires, e.g. available at   https://www.adafruit.com/product/1951  | 2.00$ |
+
+The estimated costs are calculated for the use of manufacturing services (e.g. Craftcloud3D for 3D-Prints or AISLER for PCB making). It is possible to lower these prices further by self-manufacturing.
 
 ------
 
