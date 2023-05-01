@@ -1,21 +1,23 @@
 # openbci-ceegrids
 This repository contains the description and materials for the implementation of a cEEGrid adapter for the use with the OpenBCI Cyton + Daisy biosignal acquisition boards.
 
-<img src="./imgs/top_v1.jpg" alt="Adapted OpenBCI Cyton Enclosure with Slots for the cEEGrid Adapter Holder" height="250"/> <img src="./imgs/adapter_v1.jpg" alt="cEEGrid Adapter with Enclosure (Adapter Holder)" height="250"/>
+<img src="./imgs/v2-1.jpg" height="250"/> <img src="./imgs/v2-4.jpg" height="250"/> 
 
-<img src="./imgs/system_v1.jpg" alt="Complete OpenBCI-cEEGrid System" height="250"/> <img src="./imgs/bottom_v1.jpg" alt="Adapted OpenBCI Cyton Enclosure with Clip for Head-Worn Isolated Applications" height="250"/>
+<img src="./imgs/v2-5.jpg" height="250"/> <img src="./imgs/v2-6.jpg" height="250"/>
+
+<img src="./imgs/v2-7.jpg" height="250"/> <img src="./imgs/v2-8.jpg" height="250"/>
 
 This repository contains:
 
 1. [Bill of Materials (BOM)](#materials)
 1. [3D-Print Files](./stl/)
+1. [PCB File](./pcb/)
 1. [Assembly Instructions](#assembly-instructions)
 
 ## Updates
 
 - The initial technical evaluation of the system has been published in the journal [Brain-Computer Interfaces in 2021](https://doi.org/10.1080/2326263X.2021.1972633)
 - The project is now part of the [KIT Earables Community](https://earables.teco.edu/)
-- We have two article submissions under review for updated versions of the OpenBCI-cEEGrid combination. Please stay tuned for newer versions in Fall/Winter.
 - We will keep making all the materials and documentation available. To make the system more readily available, we also offer to source the materials for you. So if you'd like to save some time, just check out [this website](https://exgtools.expeeeriments.io/).
 
 <a href="https://exgtools.expeeeriments.io/" target="_blank"><img src="./imgs/kitComponents.jpg" alt="Components of the OpenBCI-cEEGrid System"/></a>
@@ -25,11 +27,12 @@ This repository contains:
 ## Publications with this System
 This is a list of peer-reviewed articles that have used the OpenBCI-cEEGrid combination:
 
-- Knierim, M.T., Schemmer, M., Bauer, Niklas (2022). A Simplified Design of a cEEGrid Ear-Electrode Adapter for the OpenBCI Biosensing Platform. HardwareX. [e00357](https://www.sciencedirect.com/science/article/pii/S246806722200102X)
+- Knierim, M.T., Schemmer, M., Bauer, N. (2022). A Simplified Design of a cEEGrid Ear-Electrode Adapter for the OpenBCI Biosensing Platform. HardwareX. [e00357](https://www.sciencedirect.com/science/article/pii/S246806722200102X)
+- Knierim, M. T., Bartholomeyczik, K., Nieken, P., & Weinhardt, C. (2022). Could we Predict Flow from Ear-EEG?. In 2022 10th International Conference on Affective Computing and Intelligent Interaction Workshops and Demos (ACIIW) 2022, 1-6.
+- Bartholomeyczik, K., Knierim, M. T., Nieken, P., Seitz, J., Stano, F., & Weinhardt, C. (2022) Flow in Knowledge Work: An Initial Evaluation of Flow Psychophysiology Across Three Cognitive Tasks. Proceedings of the NeuroIS Retreat 2022, 30-41.
 - Knierim, M. T., Berger, C., & Reali, P. (2021). Open-source concealed EEG data collection for Brain-computer-interfaces - neural observation through OpenBCI amplifiers with around-the-ear cEEGrid electrodes. Brain-Computer Interfaces, 8(4), 161-179.
 - Knierim, M. T., Schemmer, M., & Perusquía-Hernández, M. (2021). Exploring the recognition of facial activities through around-the-ear electrode arrays (cEEGrids). Proceedings of the NeuroIS Retreat 2021, 47-55.
 - Knierim, M. T., Schemmer, M., & Woehler, D. (2021). Detecting Daytime Bruxism Through Convenient and Wearable Around-the-Ear Electrodes. Proceedings of the International Conference on Applied Human Factors and Ergonomics 2021, 26-33.
-- Bartholomeyczik, K., Knierim, M. T., Nieken, P., Seitz, J., Stano, F., & Weinhardt, C. (2022) Flow in Knowledge Work: An Initial Evaluation of Flow Psychophysiology Across Three Cognitive Tasks. Proceedings of the NeuroIS Retreat 2022, 30-41.
 
 ------
 
@@ -37,11 +40,9 @@ This is a list of peer-reviewed articles that have used the OpenBCI-cEEGrid comb
 Currently, there are two main options for using the system:
 
 1. Isolated Use: 18-channel head-worn cEEGrid data collection (wear it using a headband, basecap, or even with a VR headset)
-2. Combined Use: Selective cEEGrid channel use in combination with selected OpenBCI Ultracortex MK IV scalp electrodes (use it for the exploration of interesting channel and reference combinations)
+2. Combined Use: Selective cEEGrid channel use in combination with selected OpenBCI Ultracortex MK IV scalp electrodes (use it for the exploration of interesting channel and reference combinations). If you want to use this combination, it is sufficient to 3D-print the cEEGrid adapter enclosures (the adapted Cyton enclosure is not required). 
 
-<img src="./imgs/use_case_1.jpg" alt="Isolated Use: Headband" height="250"/> <img src="./imgs/use_case_2.jpg" alt="Isolated Use: Basecap" height="250"/>
-
-<img src="./imgs/use_case_3.jpg" alt="Isolated Use: VR Headset" height="250"/> <img src="./imgs/use_case_4.jpg" alt="Combined Use: Ultracortex MK IV" height="250"/>
+<img src="./imgs/v2-10.jpg" height="250"/>
 
 For the documentation of the cEEGrid development please refer to the [cEEGrid developers website](https://uol.de/psychologie/abteilungen/ceegrid) or the publication by [Debener et al. 2015](https://www.nature.com/articles/srep16743).
 
@@ -68,20 +69,18 @@ References:
 
 ## Materials
 
-| Amount | Part   Description                                                  | Instance /   Reference                                                                                               | Est. Cost |
-|--------|---------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|---|
-| 1      | OpenBCI Cyton Board + Daisy Shield   (Biosignal Acquisition Boards) | Available from the manufacturer at: https://shop.openbci.com/collections/frontpage/products/cyton-daisy-biosensing-boards-16-channel?variant=38959256526                                                                                  | 2,050,00$ |
-| 2      | cEEGrid Electrodes                                                  | Available from   the manufacturer at: https://shop.tmsi.com/product/ceegrid (The shop is currently being redesigned, but you can contact TMSI via mail to order cEEGrids - sales@tmsi.com)                                          | 65.00$ |
-| 2      | Printed   Circuit Boards                                            | Custom PCB made   available by the cEEGrid developers here: https://github.com/mgbleichner/nEEGlace/tree/master/cEEGrid-Adapter; Can be manufactured on demand, e.g. at https://aisler.net/ (upload all files as .zip)                                                                                                                                                                 | 25.00$ |
-| 1      | Re-designed Cyton + Daisy Board Mounts                              | [3D-Print Files](./stl/)                                                       | 5.00$ |
-| 2      | PCB Holder                                                          | [3D-Print Files](./stl/)                                                                                              | 4.00$ |
-| 1      | Headband Clip                                                       | [3D-Print Files](./stl/)                                                                                             | 2.00$ |
-| 2      | No. 4 Screws for Brittle Plastic                                    | To attach the headband clip to the   Cyton board mount - https://www.mcmaster.com/90385A323/                         | 0.50$ |
-| 2      | Mini Edge Card Socket                                               | SAMTEC MB1-120-01-L-S-01-SL-N –   configurable at https://www.samtec.com/products/mb1                                | 12.50$ |
-| 20     | Pin Headers                                                         | Here we used short male headers   with 0.1 inch pitch, e.g. available at https://www.adafruit.com/product/3009       | 5.00$ |
-| 20     | Jumper Cables                                                       | Here we used short (3 inch)   female/female jumper wires, e.g. available at   https://www.adafruit.com/product/1951  | 2.00$ |
-
-The estimated costs are calculated for the use of manufacturing services (e.g. Craftcloud3D for 3D-Prints or AISLER for PCB making). It is possible to lower these prices further by self-manufacturing.
+| Amount | Part   Description                                                  | Instance /   Reference                                                                                               |
+|--------|---------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| 1      | OpenBCI Cyton Board + Daisy Shield   (Biosignal Acquisition Boards) | Available from the manufacturer at: https://shop.openbci.com/collections/frontpage/products/cyton-daisy-biosensing-boards-16-channel?variant=38959256526                                                                                  |
+| 2      | cEEGrid Electrodes                                                  | Available from   the manufacturer at: https://shop.tmsi.com/product/ceegrid                                          |
+| 2      | Printed   Circuit Boards                                            | Custom [PCB File](./pcb/) available in this repository; Can be manufactured on demand, e.g. at   https://aisler.net/                                                                                                                                                                 |
+| 1      | Re-designed Cyton + Daisy Board Mounts                              | Custom [3D-Print Files](./stl/) available in this repository                   |
+| 2      | PCB Holder                                                          | Custom [3D-Print Files](./stl/) available in this repository                   |
+| 1      | Headband Clip                                                       | Custom [3D-Print Files](./stl/) available in this repository                   |
+| 2      | No. 4 Screws for Brittle Plastic                                    | To attach the headband clip to the Cyton board mount - https://www.mcmaster.com/90385A323/                         |
+| 2      | Mini Edge Card Socket                                               | SAMTEC MB1-120-01-L-S-01-SL-N –   configurable at https://www.samtec.com/products/mb1                                |
+| 20     | Pin Headers                                                         | Here we used a 10-pin angled SMD header, with 2.54 inch pitch, e.g. available from Harwin Inc. (MPN: M20-8891045) |
+| 20     | Jumper Cables                                                       | Here we used short (3 inch) female/female jumper wires, e.g. available at   https://www.adafruit.com/product/1951  |
 
 ------
 
@@ -94,4 +93,4 @@ The herein described system is comprised of three main components: (1) The OpenB
 
 (3) Finally, to integrate the two initial components, a few additional steps and components need to be completed. For the herein shown system, a decision was made to solder on stack headers on to the PCB. Initially, individual jumper cables were soldered on to the PCB, yet were found to be a bit cumbersome to work with since not all of the cables can be used with the Cyton+Daisy boards (20 cables for 18 pins). Also, the stack headers provided more flexibility to adapt cable lengths for different mounting solutions. To link the cEEGrid PCB and the OpenBCI board, now only a set of 20 short female jumper cables is required. For this final assembly step, two important aspects need to be mentioned. First, the cables should be attached securely to reduce artefacts that might appear due to cable movement. We have opted for a simple solution of twisting the cables together to secure them. Second, care needs to be taken to route the cables to the recording pins on the OpenBCI board correctly. While the cEEGrid is symmetrical, the fact that two electrodes need to be left out in this configuration requires an adequate mapping for the left and right ear. To facilitate this step, the schematic below shows the pins on the cEEGrid for the left and right ear. We recommend connecting the right ear to the Cyton pins (channel 1-8 in the OpenBCI GUI) and the left ear to the Daisy pins (channel 9-16 in the OpenBCI GUI). We also recommend maintaining the colour coding to keep track of which electrodes are being used and which are left out. For the correct routing of the reference and ground electrodes, please refer to the OpenBCI documentation mentioned in step (1) or consider the placement of the grey cables in the schematic below. To complete the system, the two parts of the headband clip, the PCB holder, and the re-designed Cyton board cover need to be 3D-printed. Regular FDM printing can be used with a standard 0.4 mm nozzle diameter and 0.2 mm layer height. Rather slow print speeds (e.g. 40 mm/s) should be used as the parts have fine details. The clip can then be secured on the board holder by using the two #4 screws. The PCB holder can be attached without any additional material. First, the Daisy module should be lifted up. Then the PCB holder can be put in and clipped between the board cover and the Daisy module.
 
-<img src="./imgs/mappings.png" alt="Schematic of the mapping of cEEGrid electrode channels on the PCB to the Cyton and Daisy pins, including a color-coding and channel reference as visible in the OpenBCI GUI during recording."/>
+<img src="./imgs/OpenBCIGUI-cEEGridRecording.png" width="600">
