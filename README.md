@@ -76,7 +76,7 @@ https://uol.de/psychologie/abteilungen/ceegrid (last accessed: February 3, 2022)
 LiPo battery on the bottom of the enclosure. Then, place the connector PCBs in their respective slots. Gently pull on the 
 edges of these slots to allow the PCBs to slide in.
 
-<img src="./imgs/v3-7.jpg" height="250"/> <img src="./imgs/v3-8.jpg" height="250"/>
+<img src="./imgs/v3-7.jpg" width="49.5%"/> <img src="./imgs/v3-8.jpg" width="49.5%"/>
 
 Next, you can start routing the jumper wires to the Cyton & Daisy boards. We recommend connecting the left ear to the 
 Cyton pins (channel 1-8 in the OpenBCI GUI) and the right ear to the Daisy pins (channel 9-16 in the OpenBCI GUI). 
@@ -84,14 +84,14 @@ We also recommend maintaining the colour coding to keep track of which electrode
 (see a screenshot of the OpenBCI GUI below. For the correct routing of the reference and ground electrodes, please refer 
 to the OpenBCI documentation mentioned in step (1).
 
-<img src="./imgs/v3-9.jpg" height="250"/> <img src="./imgs/v3-10.jpg" height="250"/>
+<img src="./imgs/v3-9.jpg" width="49.5%"/> <img src="./imgs/v3-10.jpg" width="49.5%"/>
 
 And that is it already! Put the top enclosure on and stack the Daisy on top of the Cyton board. Attach the system to your 
 preferred mounting solution (a headband, cap, hat, VR lenses, or similar) and start your recording (see a screenshot of 
 a recording in OpenBCI GUI below).
 
-<img src="./imgs/v3-11.jpg" height="250"/> <img src="./imgs/v3-12.jpg" height="250"/>
-<img src="./imgs/OpenBCIGUI-cEEGridRecording.png" width="600">
+<img src="./imgs/v3-11.jpg" width="49.5%"/> <img src="./imgs/v3-12.jpg" width="49.5%"/>
+<img src="./imgs/OpenBCIGUI-cEEGridRecording.png" width="98%">
 
 
 ------
@@ -124,7 +124,7 @@ complex, multi-session data collection. One participant completed an experiment 
 which 28 facial activities were posed (two of which are jaw clenching activities - see the following figure). 
 The experimental protocol was highly similar to that reported in (Knierim et al. 2021c).
 
-<img src="./imgs/bruxismExpProcedure.png" height="1289"/>
+<img src="./imgs/bruxismExpProcedure.png" width="98%"/>
 
 The recorded signals were labeled according to the corresponding experiment phase and trial (with a shift of 350ms for 
 onset/offset of the facial activity per trial). Afterwards, to mimic the process of a live (online) classification system, 
@@ -148,7 +148,9 @@ the [recorded data and the Python code](./code/) for a simple live bruxism detec
 
 Take a look at this video to see the live biofeedback system in action:
 
-<video width="400" controls><source src="BruxismDemo.mp4" type="video/mp4"></video>
+<a href="./video/bruxismDemo.mp4">
+	<img src="./video/bruxismDemo.png" width="49.5%"/>
+</a>
 
 ------
 
