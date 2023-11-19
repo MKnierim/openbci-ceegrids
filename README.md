@@ -1,18 +1,25 @@
 # openbci-ceegrids
-This repository contains the description and materials for the implementation of a cEEGrid adapter for the use with the 
-OpenBCI Cyton + Daisy biosignal acquisition boards. 
+Collecting brain signals from the ear - affordably and reliably with gelled around-the-ear EEG electrodes (cEEGrids) and the OpenBCI ExG biosignal amplification system.
 
-<img src="./imgs/v3-2.jpg" width="49.5%"/> <img src="./imgs/v3-1.jpg" width="49.5%"/> 
+This repository contains the materials and documentation of this cEEGrid adapter for the use with the OpenBCI Cyton + Daisy boards. 
 
-<img src="./imgs/v3-3.jpg" width="49.5%"/> <img src="./imgs/v3-6.jpg" width="49.5%"/>
+<img src="./imgs/v4-4.jpg" width="49.5%"/> <img src="./imgs/v4-5.jpg" width="49.5%"/> 
 
-<img src="./imgs/v3-13.jpg" width="49.5%"/> <img src="./imgs/v3-14.jpg" width="49.5%"/>
+<img src="./imgs/v4-6.jpg" width="49.5%"/> <img src="./imgs/v4-1.jpg" width="49.5%"/>
 
-## Updates
+<img src="./imgs/v4-2.jpg" width="49.5%"/> <img src="./imgs/v4-3.jpg" width="49.5%"/>
+
+## Version Updates
+
+This fourth version of the OpenBCI cEEGrid Adapter features:
+
+- **Better Battery Access & Storage:** by taking away the bottom coverage slightly, users can more easily (dis-) connect a battery for charging.
+- **Sturdier Body:** By improving tolerances, wall thickness and locking mechanisms, the cover is now much stronger.
+- **Better Usability with Baseball Caps:** Through a re-design of the bottom clip, the system can now be used with baseball caps and headbands more easily and reliably.
 
 - The initial technical evaluation of the system has been published in the journal [Brain-Computer Interfaces in 2021](https://doi.org/10.1080/2326263X.2021.1972633)
 - For the documentation of the cEEGrid development please refer to the [cEEGrid developers website](https://uol.de/psychologie/abteilungen/ceegrid) or the publication by [Debener et al. 2015](https://www.nature.com/articles/srep16743).
-- The project is now part of the [KIT Earables Community](https://earables.teco.edu/)
+- The project is part of the [KIT Earables Community](https://earables.teco.edu/)
 - We will keep making all the materials and documentation available. To make the system more readily available, we also offer to source the materials for you. So if you'd like to save some time, just check out [this website](https://exgtools.expeeeriments.io/).
 
 <a href="https://exgtools.expeeeriments.io/" target="_blank">
@@ -23,16 +30,6 @@ OpenBCI Cyton + Daisy biosignal acquisition boards.
 	<img src="./imgs/elecReplacements.png" alt="Gold-plated cEEGrid Replacement Electrodes" width="49.5%"/>
 </a>
 
-This third version of the OpenBCI cEEGrid Adapter features:
-
-- **Better Connector Placement:** reducing the distance to the ears and thereby reducing tension on the electrode cables 
-  for some participants with larger head sizes.
-- **Better Cable Storage:** By routing the connector cables inside of the enclosure, artefacts from cable contacts are 
-  eliminated, and the overall footprint of the system is reduced.
-- **Fewer Components:** Through a re-design of the 3D printed components, only two parts need to be printed now 
-  (the Cyton+Daisy board cover).
-- **Versatility:** Wear it using a headband, basecap, or even with a VR headset.
-
 ------
 
 ## Materials
@@ -41,6 +38,7 @@ This third version of the OpenBCI cEEGrid Adapter features:
 |--------|---------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
 | 1      | OpenBCI Cyton Board + Daisy Shield   (Biosignal Acquisition Boards) | Available from <a href="https://shop.openbci.com/collections/frontpage/products/cyton-daisy-biosensing-boards-16-channel?variant=38959256526" target="_blank">OpenBCI</a>              |
 | 2      | cEEGrid Electrodes                                                  | Gold-Plated cEEGrids from <a href="https://exgtools.expeeeriments.io/" target="_blank">us</a> or Silver/Silver-Chloride cEEGrids through <a>sales@tmsi.com</a>; Check <a href="https://doi.org/10.1002/nano.202100345" target="_blank">Kurniawan et al. 2022</a> for a material comparison                                          |
+| 1      | cEEGrid Sticker Applicator Form                              	   | Custom [3D-Print Files](./stl/) available in this repository                   |
 | 2      | Printed   Circuit Boards                                            | Custom [PCB File](./pcb/) available in this repository; Can be manufactured on demand, e.g. at   https://aisler.net/                                                                                                                                                                 |
 | 1      | Re-designed Cyton + Daisy Board Mounts                              | Custom [3D-Print Files](./stl/) available in this repository                   |
 | 2      | Mini Edge Card Socket                                               | SAMTEC MB1-120-01-L-S-01-SL-N –   configurable at https://www.samtec.com/products/mb1                                |
@@ -50,49 +48,112 @@ This third version of the OpenBCI cEEGrid Adapter features:
 
 ------
 
-## Assembly Instructions
-The herein described system is comprised of three main components: (1) The OpenBCI Cyton microcontroller with the Daisy 
+## Assembly & Use Instructions
+The kit is comprised of three main components: (1) The OpenBCI Cyton microcontroller with the Daisy 
 shield that enables the low-cost mobile biosignal acquisition (e.g. EEG, ECG, or EMG), (2) the cEEGrid electrodes, a set 
-of flexible printed Ag/AgCl electrodes in a c-shaped form that can be placed around a person’s ear using adhesives, and 
-(3) the printed circuit board that transmits the signal from the applied cEEGrids to an amplifier. To assemble the system, 
-please follow these instructions:
+of flex-printed electrodes in a c-shaped form that can be placed around a person’s ear using adhesives, and 
+(3) the printed circuit board (PCB) that transmits the signal from the applied cEEGrids to an amplifier (the adapter).
 
-(1) For the OpenBCI Cyton+Daisy assembly for regular EEG data collection, please follow the thorough instructions provided 
-by the device manufacturers: https://docs.openbci.com/AddOns/Headwear/MarkIV/ (last accessed: February 3, 2022). As a 
-power supply, use a ~500mAh or 1000mAh lithium-ion rechargeable battery pack that fits into the board holder. To assemble 
-the system, print the re-designed Cyton board mounts (bottom and top). Regular FDM printing can be used with a standard 
-0.4 mm nozzle diameter and 0.2 mm layer height. Rather slow print speeds (e.g. 40 mm/s) should be used as the parts have 
-fine details.
+### Manufacturing the Components
+To produce the plastic components (bottom and top board covers and cEEGrid sticker applicator - [3D-Print Files](./stl/)), FDM 3D-printing can be used 
+with a standard 0.4 mm nozzle diameter and 0.2 mm layer height. Rather slow print speeds (e.g. 40 mm/s) should be used as the parts have fine details.
 
-(2) To assemble the cEEGrid adapter, three parts are required, a contact point that connects to the cEEGrid pins (2mm 
-pitch – used here is a mini edge card socket by the company SAMTEC), a simple printed circuit board, and a set of male 
-or female pin headers with 2.54mm pitch (10 pins, single row). The parts can be joined using a soldering iron. To 
-facilitate the soldering of the mini edge card socket to the PCB and to lower the risk of bridges it is recommended that 
-every second pin (but starting with the first pin) of the card socket is removed before assembling the connector. 
-Extensive instructions for this assembly and for the use of the cEEGrids are provided by the cEEGrid developers at: 
-https://uol.de/psychologie/abteilungen/ceegrid (last accessed: February 3, 2022).
+To assemble a cEEGrid adapter PCB, three parts are required, a contact point that connects to the cEEGrid pins (2mm pitch – 
+used here is a mini edge card socket by the company SAMTEC), a PCB, and a set of male  or female pin headers with 2.54mm pitch 
+(10 pins, single row). The parts can be joined using a soldering iron. To facilitate the soldering of the mini edge card socket 
+to the PCB and to lower the risk of bridges it is recommended that every second pin (but starting with the first pin) of the card 
+socket is removed before assembling the connector. Extensive instructions for this assembly and for the use of the cEEGrids are 
+provided by the cEEGrid developers at: https://uol.de/neuropsychologie/howtoconnect.
 
-(3) Finally, to integrate the two initial components, only a few additional steps need to be completed. First, place the 
-LiPo battery on the bottom of the enclosure. Then, place the connector PCBs in their respective slots. Gently pull on the 
-edges of these slots to allow the PCBs to slide in.
 
-<img src="./imgs/v3-7.jpg" width="49.5%"/> <img src="./imgs/v3-8.jpg" width="49.5%"/>
+### Assembly of the Kit
+#### Channel Selection
+Before you get started with the assembly, you need to decide which cEEGrid electrodes you want to use in your recording.
+Each cEEGrid electrode comes with 10 electrodes (so 20 in total on both ears), but the OpenBCI Cyton+Daisy can only record from
+up to 16 channels (+ REF & GND electrodes). Therefore, you need to decide which electrodes to use. For starters, we recommend 
+the following default layout that provides fairly even coverage by excluding channel L3 & R3, and using channel L6 as REF and R6 as GND. 
+A similar configuration was used in the validation study in [Brain-Computer Interfaces in 2021](https://doi.org/10.1080/2326263X.2021.1972633) for the cEEGrid OpenBCI combination.
+If you want to highlight the configuration that you used in a publication, you may use the [PowerPoint](./res/) from this repository for a figure.
 
-Next, you can start routing the jumper wires to the Cyton & Daisy boards. We recommend connecting the left ear to the 
-Cyton pins (channel 1-8 in the OpenBCI GUI) and the right ear to the Daisy pins (channel 9-16 in the OpenBCI GUI). 
-We also recommend maintaining the colour coding to keep track of which electrodes are being used and which are left out 
-(see a screenshot of the OpenBCI GUI below. For the correct routing of the reference and ground electrodes, please refer 
-to the OpenBCI documentation mentioned in step (1).
+#### Connecting the Adapter PCB
+The figure below shows how you should route the jumper cables from the adapter PCB to the Cyton+Daisy boards for the configuration mentioned above.
 
-<img src="./imgs/v3-9.jpg" width="49.5%"/> <img src="./imgs/v3-10.jpg" width="49.5%"/>
+<img src="./imgs/cEEGridMappings.png" width="98%">
 
-And that is it already! Put the top enclosure on and stack the Daisy on top of the Cyton board. Attach the system to your 
-preferred mounting solution (a headband, cap, hat, VR lenses, or similar) and start your recording (see a screenshot of 
-a recording in OpenBCI GUI below).
+We recommend connecting the left ear to the Cyton pins (channel 1-8 in the OpenBCI GUI) and the right ear 
+to the Daisy pins (channel 9-16 in the OpenBCI GUI). We also recommend maintaining the colour coding to keep 
+track of which electrodes are being used and which are left out (see a screenshot of the OpenBCI GUI below.
 
-<img src="./imgs/v3-11.jpg" width="49.5%"/> <img src="./imgs/v3-12.jpg" width="49.5%"/>
+Start by placing the connector PCBs in their respective slots. Gently pull on the edges of these slots to allow the PCBs to slide in.
+
+<img src="./imgs/v4-7.jpg" width="49.5%"/>
+
+Then connect the jumper cables. Make sure to route the jumper wires in a way that the cables will run below the Cyton board (not above it).
+To set REF & GND, connect the designated electrodes/pins (here R4a and R4b) to the bottom SRB (for REF) and bottom BIAS (for GND) pins on the Cyton. Beware that the Cyton and Daisy boards need to be connected using a y-splitter cable that comes with the Cyton+Daisy kit (or can be purchased in the OpenBCI shop at: https://shop.openbci.com/products/y-splitter-cable).
+This is the default setup for the Cyton+Daisy to collect EEG data (see also: https://docs.openbci.com/GettingStarted/Biosensing-Setups/EEGSetup/)
+
+<img src="./imgs/v4-8.jpg" width="49.5%"/> <img src="./imgs/v4-9.jpg" width="49.5%"/>
+
+Next, put the top enclosure on and stack the Daisy on top of the Cyton board. 
+<img src="./imgs/v4-10.jpg" width="49.5%"/> <img src="./imgs/v4-11.jpg" width="49.5%"/>
+
+Almost there now, you just need to add a battery.
+
+#### Connecting the Battery
+As a power supply, use a 400 or 500mAh lithium-ion rechargeable battery pack. Simply plug the battery into the JST-PH connector that is accesible from the bottom of the case. Then, stow away the battery in the case by sliding it in through the large opening on the bottom cover. 
+
+<img src="./imgs/v4-12.jpg" width="49.5%"/> <img src="./imgs/v4-13.jpg" width="49.5%"/>
+
+Voilà, you are set up, attach to your hat and get recording!
+
+#### Wearing Solution
+Attach the system to your preferred mounting solution (a headband, cap, hat, VR lenses, or similar) and start your recording. For laboratory recordings we recommend using a simple headband. Here, especially a thin one works perfectly and does not produce a warming sensation. For field settings, we recommend using a baseball cap to blend more naturally in everyday situations.
+
+<img src="./imgs/v4-5.jpg" width="49.5%"/> <img src="./imgs/v4-6.jpg" width="49.5%"/>
+
+### Setting up a Recording
+Haven't used cEEGrids before? No problem, we got you covered with the use instructions below. 
+
+Important note: We are using gold-plated cEEGrids whereas the original cEEGrids used an Ag/AgCl plating that is commonly used in EEG systems. The use and design is otherwise exactly the same, so you can also decide which ones to use.
+
+<img src="./imgs/v4-14.jpg" width="49.5%"/> <img src="./imgs/v4-15.jpg" width="49.5%"/>
+
+Worried about the recording suitability? Recent research (https://doi.org/10.1002/nano.202100345) highlights lower impedance of gold (Au) electrodes in the 1-1000Hz region than Ag/AgCl (but higher impedances <1Hz). So, for most EEG and EMG recordings, these gold-plated electrodes are a fantastic alternative!
+
+#### Attaching cEEGrids
+Ok, so now that you have your kit set up and are ready to conduct a recording, you need to prepare and apply the cEEGrid electrodes. Here, we are following the instructions by the cEEGrid developers (see: https://uol.de/neuropsychologie/howtouse). They have also produced a set of video instructions: https://uol.de/en/psychology/neurophysiology/resources/ceegrid-video-tutorial. For completeness, we detail the cEEGrid application steps here as well. 
+
+In a first step, make sure you have two cEEGrids ready. That means, you should attach a new set of stickers with the help of the sticker applicator. Make sure, to attach the sticker on the correct side (the side where the gold pads are exposed). Place the cEEGrid in the applicator form, remove the liner on one side of the sticker and attach it from the outside inwards. Make sure that the holes are leaving the electrode pads uncovered.
+
+<img src="./imgs/v4-16.jpg" width="49.5%"/> <img src="./imgs/v4-17.jpg" width="49.5%"/>
+
+Next, take off the other side of the sticker and leave the electrode lying on a table with the adhesive exposed. We prefer adding the gel after this step to not accidentally remove it when taking off the sticker liner afterwards. Add a lentil-sized amount of electrolyte to each individual electrode pad using the syringe. We use Abrasiv Plus from OneStep, but other electrolytes should work as well.
+
+<img src="./imgs/v4-18.jpg" width="49.5%"/> <img src="./imgs/v4-19.jpg" width="49.5%"/>
+
+Now, get the participant's skin ready and apply the electrode. It is recommended to clean the skin around the ear with an alcohol pad to remove oily residues that can lower the signal-to-noise ratio (SNR) of your recordings due to higher impedances at the electrode-skin interface. Ask the participant to keep hair away from the ear and gently apply the cEEGrid. The grid is perfectly positioned when it is not touching the pinna (outer-ear).
+
+<img src="./imgs/v4-20.jpg" width="49.5%"/> <img src="./imgs/v4-21.jpg" width="49.5%"/>
+
+Plug in the cEEGrids (gold plates facing towards the head) into the edge card sockets and you are ready to start recording! 
+
+<img src="./imgs/v4-22.jpg" width="49.5%"/> <img src="./imgs/v4-23.jpg" width="49.5%"/>
+
+#### Starting a Recording
+To start a recording, open OpenBCI GUI with the 16 channel configuration and connect the Cyton+Daisy boards. You can click "Start Data Stream" to see the signals coming in. Before you record the data, you should conduct some initial signal quality checks. 
+
+As a first indicator, you will see, if all channels are showing similar signals and amplitudes. As the cEEGrid electrodes are close to each other, the signals will be similar (but not exactly the same!). If you see individual flat or heavily fluctuating channels in isolation, these electrode pads might need a bit more gel. If two or more channels next to each other are flat, you probably have accidentally created a gel bridge, shortening the two channels. In that case, you unfortunately have to detach the cEEGrid, clean off the gel, and then re-apply it.
+
+As another signal quality check, you should inspect the channel impedances to get a more accurate SNR metric. Switch to the "Cyton Signal" widget and click the "Check all Channels" button. This checks the impedance on each channel iteratively (see also: https://docs.openbci.com/Software/OpenBCISoftware/GUIDocs/#impedance-testing). Beware that the impedances may take a little while to settle, similarly to cap-based EEG. With good skin cleaning and adequate amount of gel you should be getting impedances between 10 and 50 kOhm.
+
+Ok, and that is it! When you are satisfied with your impedances and signal qualities, click the "Start Data Stream" button again and enjoy collecting cEEGrid data! If you are looking for inspiration, check out some of the documented cases below!
+
 <img src="./imgs/OpenBCIGUI-cEEGridRecording.png" width="98%">
 
+#### Cleaning / Re-using the cEEGrids
+If handled properly a cEEGrid can be re-used a few times. After removal from the partcipant, carefully remove the used adhesive sticker. Try to not scratch the electrode pads during removal. Then, clean the grid very gently under running water. Make sure to rinse off all the gel. Do not rub the electrode pads and do not use any chemicals for cleaning. Dry the cleaned cEEGrid gently with a tissue and store it in a dark place, protected from light.
+
+<img src="./imgs/v4-24.jpg" width="49.5%"/> <img src="./imgs/v4-25.jpg" width="49.5%"/>
 
 ------
 
@@ -149,13 +210,14 @@ the [recorded data and the Python code](./code/) for a simple live bruxism detec
 Take a look at this video to see the live biofeedback system in action:
 
 <a href="./video/bruxismDemo.mp4">
-	<img src="./video/bruxismDemo.png" width="49.5%"/>
+	<img src="./video/bruxismDemo.png"/>
 </a>
 
 ------
 
 ## Publications
 ### With this System
+- Knierim, M. T., Bleichner, M. G., & Reali, P. (2023). A Systematic Comparison of High-End and Low-Cost EEG Amplifiers for Concealed, Around-the-Ear EEG Recordings. Sensors, 23(9), 4559. https://doi.org/10.3390/s23094559
 - Knierim, M.T., Schemmer, M., Bauer, N. (2022)a. A Simplified Design of a cEEGrid Ear-Electrode Adapter for the OpenBCI Biosensing Platform. HardwareX. [e00357] DOI: <a href="https://doi.org/10.1016/j.ohx.2022.e00357" target="_blank">https://doi.org/10.1016/j.ohx.2022.e00357</a>
 - Knierim, M. T., Bartholomeyczik, K., Nieken, P., & Weinhardt, C. (2022)b. Could we Predict Flow from Ear-EEG?. In 2022 10th International Conference on Affective Computing and Intelligent Interaction Workshops and Demos (ACIIW) 2022, 1-6. DOI: <a href="https://doi.org/10.1109/ACIIW57231.2022.10086037" target="_blank">https://doi.org/10.1109/ACIIW57231.2022.10086037</a>
 - Bartholomeyczik, K., Knierim, M. T., Nieken, P., Seitz, J., Stano, F., & Weinhardt, C. (2022) Flow in Knowledge Work: An Initial Evaluation of Flow Psychophysiology Across Three Cognitive Tasks. Proceedings of the NeuroIS Retreat 2022, 30-41. DOI: <a href="https://doi.org/10.1007/978-3-031-13064-9_3" target="_blank">https://doi.org/10.1007/978-3-031-13064-9_3</a>
@@ -174,3 +236,17 @@ Take a look at this video to see the live biofeedback system in action:
 - Jaeger, M., Mirkovic, B., Bleichner, M. G., & Debener, S. (2020). Decoding the attended speaker from EEG using adaptive evaluation intervals captures fluctuations in attentional listening. Frontiers in Neuroscience, 14, 603. DOI: <a href="https://doi.org/10.3389/fnins.2020.00603" target="_blank">https://doi.org/10.3389/fnins.2020.00603</a>
 - Mirkovic, B., Bleichner, M. G., De Vos, M., & Debener, S. (2016). Target speaker detection with concealed EEG around the ear. Frontiers in neuroscience, 10, 349. DOI: <a href="https://doi.org/10.3389/fnins.2016.00349" target="_blank">https://doi.org/10.3389/fnins.2016.00349</a>
 - Nogueira, W., Dolhopiatenko, H., Schierholz, I., Büchner, A., Mirkovic, B., Bleichner, M. G., & Debener, S. (2019). Decoding selective attention in normal hearing listeners and bilateral cochlear implant users with concealed ear EEG. Frontiers in neuroscience, 13, 720. DOI: <a href="https://doi.org/10.3389/fnins.2019.00720" target="_blank">https://doi.org/10.3389/fnins.2019.00720</a>
+
+### Citation
+```bib
+@article{10.1080/2326263X.2021.1972633,
+  title={Open-source concealed EEG data collection for Brain-computer-interfaces-neural observation through OpenBCI amplifiers with around-the-ear cEEGrid electrodes},
+  author={Knierim, Michael Thomas and Berger, Christoph and Reali, Pierluigi},
+  journal={Brain-Computer Interfaces},
+  volume={8},
+  number={4},
+  pages={161--179},
+  year={2021},
+  publisher={Taylor \& Francis}
+}
+```
